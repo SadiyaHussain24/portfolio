@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Personal Portfolio Website of Sadiya Hussain - Creative Web Developer & Full-Stack Enthusiast." />
+  <title>Sadiya Hussain | Creative Web Developer & Full-Stack Enthusiast</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Custom CSS Stylesheet -->
+  <link rel="stylesheet" crossorigin href="/assets/index-CJTB8luT.css">
+</head>
+
+<body>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+
+  <!-- =========================================================================
+       1. HEADER / FIXED NAVBAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" id="navLogo">
+        Sadiya<span>.Hussain</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         2. HERO SECTION
+         ======================================================================= -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <!-- Hero Text Column -->
+        <div class="hero-content reveal-left">
+          <div class="hero-greeting">
+            <span class="wave-hand">👋</span> Hello World, I'm
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Sadiya Hussain</span>
+          </h1>
+          <div class="hero-subtitle">
+            I build&nbsp;<span class="typing-text" id="typingText"></span>
+          </div>
+          <p class="hero-description">
+            First-year student and aspiring web developer, building responsive single web pages and learning backend
+            integration with PHP and MySQL. Passionate about writing clean code and creating user-friendly web
+            experiences.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta">
+            <button class="btn btn-primary" id="resumeBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              My Resume
+            </button>
+            <a href="#contact" class="btn btn-secondary">
+              Let's Connect
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="hero-socials">
+            <a href="https://github.com/SadiyaHussain24" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/sadiya-hussain-ahmed-39b281384/" target="_blank"
+              rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="mailto:sadiyaid7@gmail.com" class="social-link" aria-label="Email Sadiya">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Avatar Column -->
+        <div class="hero-visual reveal-right">
+          <div class="hero-avatar-wrapper">
+            <div class="hero-avatar-inner">
+              <img src="/assets/WhatsApp%20Image%202026-07-24%20at%2000.24.09-B_vfqDLk.jpeg" alt="Sadiya Hussain Profile" class="avatar-img" />
+            </div>
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-1">
+            <span class="badge-icon">⚡</span>
+            <div>
+              <div style="color: var(--text-main);">Full-Stack</div>
+              <div style="font-size: 0.75rem; color: var(--accent-cyan);">Web Solutions</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-2">
+            <span class="badge-icon">🎨</span>
+            <div>
+              <div style="color: var(--text-main);">UI/UX Enthusiast</div>
+              <div style="font-size: 0.75rem; color: var(--accent-purple);">Modern Design</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. ABOUT ME SECTION
+         ======================================================================= -->
+    <section class="section-padding" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Discover My Story</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- About Image Frame -->
+          <div class="about-img-box reveal-left">
+            <img src="/assets/WhatsApp%20Image%202026-07-24%20at%2000.24.09-B_vfqDLk.jpeg" alt="Sadiya Hussain Workspace" />
+            <div class="about-experience-badge">
+              <div class="exp-number">100%</div>
+              <div class="exp-text">Dedicated & Driven</div>
+            </div>
+          </div>
+
+          <!-- Bio & Highlights -->
+          <div class="about-content reveal-right">
+            <div class="about-bio">
+              <p>
+                Hello! I am <strong>Sadiya Hussain</strong>, a motivated first-year student and aspiring web developer,
+                with a great
+                passion for clean design and responsive layouts. I am focusing on building modern and user-friendly
+                single web pages and full websites using HTML5, CSS3, JavaScript, PHP, and MySQL.
+              </p>
+              <p>
+                My journey into tech started with a deep curiosity for learning new concepts and solving problems
+                through code. Whether it is doing clean CSS styling or implementing backend features through PHP and
+                MySQL, I bring creativity and attention to detail to every project of mine.
+              </p>
+            </div>
+
+            <div class="about-info-grid">
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="info-details">
+                  <label>Name</label>
+                  <span>Sadiya Hussain</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="info-details">
+                  <label>Email</label>
+                  <span>sadiyaid7@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="info-details">
+                  <label>Location</label>
+                  <span>Pakistan Karachi</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <div class="info-details">
+                  <label>Status</label>
+                  <span style="color: var(--accent-cyan);">Open for Opportunities</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="#projects" class="btn btn-primary">
+              View My Work
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. SKILLS SECTION
+         ======================================================================= -->
+    <section class="section-padding" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Technical Proficiency</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card: HTML5 -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-icon">🌐</div>
+              <div>
+                <div class="skill-title">HTML5</div>
+                <div class="skill-level">Semantic & Accessible</div>
+              </div>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-bar" data-width="95%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card: CSS3 -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-icon">🎨</div>
+              <div>
+                <div class="skill-title">CSS3 & Animations</div>
+                <div class="skill-level">Flexbox, Grid & Custom Styling</div>
+              </div>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-bar" data-width="90%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card: JavaScript -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-icon">⚡</div>
+              <div>
+                <div class="skill-title">JavaScript</div>
+                <div class="skill-level">DOM, Async & SPA Architecture</div>
+              </div>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-bar" data-width="50%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card: PHP -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-icon">📍</div>
+              <div>
+                <div class="skill-title">Php</div>
+                <div class="skill-level">Backend Development</div>
+              </div>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-bar" data-width="90%"></div>
+            </div>
+          </div>
+
+
+
+          <!-- Skill Card: SQL -->
+          <div class="skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-icon">🛢️</div>
+              <div>
+                <div class="skill-title"> MySQL & Databases</div>
+                <div class="skill-level">Relational Data & Queries</div>
+              </div>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-bar" data-width="95%"></div>
+            </div>
+          </div>
+
+    </section>
+
+    <!-- =======================================================================
+         5. PROJECTS SECTION
+         ======================================================================= -->
+    <section class="section-padding" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Portfolio Highlights</span>
+          <h2 class="section-title"> ⚡My Work⚡</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 Card -->
+          <div class="project-card reveal">
+            <div class="project-img-wrapper">
+              <img src="/assets/mind-W8h8A865.PNG" alt="Project 1 Preview" class="project-img" />
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">MindCare</h3>
+              <p class="project-description">
+                MindCare is a modern and responsive mental health awareness website dedicated to promoting emotional
+                well-being. It features an intuitive layout, informative wellness resources, and a user-centric design
+                to provide visitors with a calming and accessible browsing experience. </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3 Grid</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">
+                <a href="http://localhost/mindcare/index.html" target="_blank"
+                  style="color: inherit; text-decoration: none;"><span>Click Here</span></a>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2 Card -->
+          <div class="project-card reveal">
+            <div class="project-img-wrapper">
+              <img src="/assets/traffic-DSHHkGem.PNG" alt="Project 2 Preview" class="project-img" />
+              <div class="project-overlay"></div>
+
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Traffic Signal Checker</h3>
+              <p class="project-description">
+                Traffic Signal Checker: An interactive web application built with HTML, CSS, and JavaScript that
+                simulates real-time traffic signal operations. It features dynamic state transitions and a clean user
+                interface to demonstrate core front-end logic and event handling.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">
+                <a href="https://sadiyahussain24.github.io/traffic-light/" target="_blank"><span>Click Here</span></a>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 3 Card -->
+          <div class="project-card reveal">
+            <div class="project-img-wrapper">
+              <img src="/assets/clock-B_XqBf1R.PNG" alt="Project 3 Preview" class="project-img" />
+              <div class="project-overlay"></div>
+
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Digital Colock</h3>
+              <p class="project-description">
+                A clean, responsive website built using HTML, CSS, and JavaScript that displays live, real-time local
+                time with a sleek design.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">
+                <a href="https://sadiyahussain24.github.io/Digital-Clock/" target="_blank"><span>Click Here</span></a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. CONTACT SECTION
+         ======================================================================= -->
+    <section class="section-padding" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">Let's Build Together</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Box -->
+          <div class="contact-info-card reveal-left">
+            <div>
+              <h3 class="contact-info-title">Contact Information</h3>
+              <p class="contact-info-text">
+                Feel free to reach out for collaborations, project inquiries, or just a friendly chat about web
+                development!
+              </p>
+            </div>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="contact-detail">
+                  <label>Full Name</label>
+                  <p>Sadiya Hussain</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-detail">
+                  <label>Email Address</label>
+                  <a href="mailto:sadiyaid7@gmail.com">sadiyaid7@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-detail">
+                  <label>Location</label>
+                  <p>Pakistan Karachi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper reveal-right">
+            <!-- Yahan action mein apna Formspree link aur method="POST" daalna hai -->
+            <form  action="https://formspree.io/f/xdaqrwwo" method="POST">
+              
+              <div class="form-group">
+                <label for="formName" class="form-label">Your Name</label>
+                <input type="text" id="formName" name="name" class="form-input" placeholder="e.g. Sadiya Hussain"
+                  required />
+              </div>
+
+              <div class="form-group">
+                <label for="formEmail" class="form-label">Your Email</label>
+                <input type="email" id="formEmail" name="email" class="form-input"
+                  placeholder="e.g. sadiyaid7@gmail.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage" class="form-label">Your Message</label>
+                <textarea id="formMessage" class="form-textarea" name="message" placeholder="Write your message here..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       7. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo logo">
+        Sadiya<span>.Hussain</span>
+        <span class="logo-dot"></span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/SadiyaHussain24" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/sadiya-hussain-ahmed-39b281384/" target="_blank" rel="noopener noreferrer"
+          class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+      </div>
+
+      <p class="footer-copy">
+        &copy; 2026 Sadiya Hussain. All Rights Reserved. Crafted with passion & precision.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 4l-8 8h6v8h4v-8h6z" />
+    </svg>
+  </button>
+
+  <!-- Floating Toast Notification -->
+  <div class="toast-notice" id="toastNotice">
+    <div class="toast-icon">✨</div>
+    <div id="toastText">Action triggered successfully.</div>
+  </div>
+
+  <!-- =========================================================================
+       8. RESUME MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-container">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
+
+      <div class="resume-header">
+        <h2 class="resume-name">Sadiya Hussain</h2>
+        <div class="resume-role">Creative Web Developer & Full-Stack Enthusiast</div>
+        <p style="font-size: 0.85rem; color: var(--text-subtle); margin-top: 0.25rem;">
+          sadiyaid7@gmail.com | Pakistan Karachi
+        </p>
+      </div>
+
+      <div class="resume-section">
+        <h3 class="resume-section-title">Professional Summary</h3>
+        <p class="resume-item-desc">
+          I am a first-year student and a motivated web developer currently learning HTML5, CSS3, JavaScript, PHP, and
+          MySQL. I enjoy building responsive single web pages, doing clean CSS styling, and using PHP and MySQL for the
+          backend. I am constantly learning new things and getting ready to build attractive, user-friendly websites.
+        </p>
+      </div>
+
+      <div class="resume-section">
+        <h3 class="resume-section-title">Core Competencies</h3>
+        <ul
+          style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted); padding-left: 1rem; list-style: disc;">
+          <li>HTML5 & Semantic Markup</li>
+          <li>CSS3, Flexbox & CSS Grid</li>
+          <li>Vanilla JavaScript </li>
+          <li>MySQL & Relational Databases</li>
+          <li>Responsive Design Principles</li>
+        </ul>
+      </div>
+
+      <div class="resume-section">
+        <h3 class="resume-section-title">Key Accomplishments</h3>
+        <div class="resume-item">
+          <div class="resume-item-header">
+            <span class="resume-item-title">Portfolio SPA Architecture</span>
+            <span class="resume-item-date">2026</span>
+          </div>
+          <div class="resume-item-sub">Custom CSS3 & Vanilla JavaScript</div>
+          <p class="resume-item-desc">
+            Designed and built a zero-framework responsive portfolio featuring glassmorphism visuals, smooth scrolling,
+            dynamic typing animations, and scroll-triggered IntersectionObserver effects.
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+        <button class="btn btn-primary" id="printResumeBtn" style="flex: 1;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9V2h12v7"></path>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          Print / Save PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure Vanilla JS Engine -->
+  <script src="/script.js"></script>
+</body>
+
+</html>
