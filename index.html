@@ -42,15 +42,43 @@
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
+        <button class="mobile-theme-btn" id="mobileThemeToggle" aria-label="Toggle Theme">
+          <span class="theme-label-text">Switch Mode</span>
+          <span class="theme-btn-icon">☀️ / 🌙</span>
+        </button>
       </nav>
 
-      <!-- Mobile Hamburger Toggle Button -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <!-- Nav Controls: Theme Toggle & Mobile Hamburger -->
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Theme" title="Toggle Theme">
+          <!-- Sun Icon (Active in Dark Mode to switch to Light) -->
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (Active in Light Mode to switch to Dark) -->
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
+    <!-- Mobile Navigation Backdrop Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
   </header>
 
   <main>
@@ -68,7 +96,7 @@
             Hi, I'm <span class="highlight">Sadiya Hussain</span>
           </h1>
           <div class="hero-subtitle">
-            I build&nbsp;<span class="typing-text" id="typingText"></span>
+            I build&nbsp; <span class="typing-text" id="typingText"></span>
           </div>
           <p class="hero-description">
             First-year student and aspiring web developer, building responsive single web pages and learning backend
@@ -129,7 +157,7 @@
         <div class="hero-visual reveal-right">
           <div class="hero-avatar-wrapper">
             <div class="hero-avatar-inner">
-              <img src="./mypic.jpeg" alt="Sadiya Hussain Profile" class="avatar-img" />
+              <img src="./main.jpeg" alt="Sadiya Hussain Profile" class="avatar-img" />
             </div>
           </div>
 
@@ -167,7 +195,7 @@
         <div class="about-grid">
           <!-- About Image Frame -->
           <div class="about-img-box reveal-left">
-            <img src="./mypic.jpeg" alt="Sadiya Hussain Workspace" />
+            <img src="./main.jpeg" alt="Sadiya Hussain Workspace" />
             <div class="about-experience-badge">
               <div class="exp-number">100%</div>
               <div class="exp-text">Dedicated & Driven</div>
@@ -179,8 +207,7 @@
             <div class="about-bio">
               <p>
                 Hello! I am <strong>Sadiya Hussain</strong>, a motivated first-year student and aspiring web developer,
-                with a great
-                passion for clean design and responsive layouts. I am focusing on building modern and user-friendly
+                with a great passion for clean design and responsive layouts. I am focusing on building modern and user-friendly
                 single web pages and full websites using HTML5, CSS3, JavaScript, PHP, and MySQL.
               </p>
               <p>
@@ -324,8 +351,6 @@
             </div>
           </div>
 
-
-
           <!-- Skill Card: SQL -->
           <div class="skill-card reveal">
             <div class="skill-header">
@@ -339,7 +364,8 @@
               <div class="skill-progress-bar" data-width="95%"></div>
             </div>
           </div>
-
+        </div>
+      </div>
     </section>
 
     <!-- =======================================================================
@@ -365,7 +391,8 @@
               <p class="project-description">
                 MindCare is a modern and responsive mental health awareness website dedicated to promoting emotional
                 well-being. It features an intuitive layout, informative wellness resources, and a user-centric design
-                to provide visitors with a calming and accessible browsing experience. </p>
+                to provide visitors with a calming and accessible browsing experience.
+              </p>
               <div class="project-tags">
                 <span class="project-tag">HTML5</span>
                 <span class="project-tag">CSS3 Grid</span>
@@ -385,7 +412,6 @@
             <div class="project-img-wrapper">
               <img src="./traffic.PNG" alt="Project 2 Preview" class="project-img" />
               <div class="project-overlay"></div>
-
             </div>
             <div class="project-content">
               <h3 class="project-title">Traffic Signal Checker</h3>
@@ -410,10 +436,9 @@
             <div class="project-img-wrapper">
               <img src="./clock.PNG" alt="Project 3 Preview" class="project-img" />
               <div class="project-overlay"></div>
-
             </div>
             <div class="project-content">
-              <h3 class="project-title">Digital Colock</h3>
+              <h3 class="project-title">Digital Clock</h3>
               <p class="project-description">
                 A clean, responsive website built using HTML, CSS, and JavaScript that displays live, real-time local
                 time with a sleek design.
@@ -498,7 +523,6 @@
 
           <!-- Contact Form -->
           <div class="contact-form-wrapper reveal-right">
-            <!-- Yahan action mein apna Formspree link aur method="POST" daalna hai -->
             <form id="contactForm">
               
               <div class="form-group">

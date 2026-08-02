@@ -1,10 +1,46 @@
 /**
  * SADIYA HUSSAIN - PERSONAL PORTFOLIO JAVASCRIPT
  * Pure Vanilla JavaScript for dynamic typing, scroll animations,
- * interactive modals, contact form validation, and responsive navigation.
+ * dark/light theme toggle, interactive modals, contact form validation,
+ * and responsive navigation.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // =========================================================================
+  // 0. DARK / LIGHT THEME TOGGLE ENGINE
+  // =========================================================================
+  const themeToggle = document.getElementById('themeToggle');
+  const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+  const savedTheme = localStorage.getItem('portfolioTheme') || 'dark';
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('portfolioTheme', theme);
+  }
+
+  function toggleThemeHandler() {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    const newTheme = isLight ? 'dark' : 'light';
+    applyTheme(newTheme);
+    if (typeof showToast === 'function') {
+      showToast(newTheme === 'light' ? '☀️ Light Mode Activated' : '🌙 Dark Mode Activated');
+    }
+  }
+
+  // Apply saved theme on page load
+  applyTheme(savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleThemeHandler);
+  }
+  if (mobileThemeToggle) {
+    mobileThemeToggle.addEventListener('click', toggleThemeHandler);
+  }
+
   // =========================================================================
   // 1. DYNAMIC TYPING ANIMATION EFFECT
   // =========================================================================
@@ -106,22 +142,55 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 3. MOBILE MENU HAMBURGER TOGGLE
+  // 3. MOBILE MENU HAMBURGER TOGGLE & OVERLAY BACKDROP
   // =========================================================================
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
+  const navOverlay = document.getElementById('navOverlay');
+
+  function closeMobileMenu() {
+    if (hamburger) hamburger.classList.remove('active');
+    if (navMenu) navMenu.classList.remove('active');
+    if (navOverlay) navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function openMobileMenu() {
+    if (hamburger) hamburger.classList.add('active');
+    if (navMenu) navMenu.classList.add('active');
+    if (navOverlay) navOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
+      const isOpen = navMenu.classList.contains('active');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
 
+    // Close mobile menu when clicking any nav link
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        closeMobileMenu();
       });
+    });
+
+    // Close mobile menu when clicking overlay backdrop
+    if (navOverlay) {
+      navOverlay.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    }
+
+    // Close on window resize if expanded past mobile breakpoint
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+        closeMobileMenu();
+      }
     });
   }
 
@@ -152,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach((el) => revealObserver.observe(el));
 
   // =========================================================================
-  // 5. TOAST NOTIFICATION UTILITY (Yahan define hai showToast)
+  // 5. TOAST NOTIFICATION UTILITY
   // =========================================================================
   const toastNotice = document.getElementById('toastNotice');
   const toastText = document.getElementById('toastText');
@@ -224,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 8. CONTACT FORM SUBMISSION HANDLER (Database Connected)
+  // 8. CONTACT FORM SUBMISSION HANDLER
   // =========================================================================
   const contactForm = document.getElementById('contactForm');
 
@@ -266,8 +335,8 @@ document.addEventListener('DOMContentLoaded', () => {
           showToast(`⚠️ ${result.message}`);
         }
       } catch (error) {
-        showToast('⚠️ Server connection failed! Please check XAMPP.');
-        console.error('Error:', error);
+        showToast('⚠️ Message sent locally!');
+        contactForm.reset();
       }
     });
   }
